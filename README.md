@@ -1,30 +1,23 @@
-# Hybrid-Movie-Recommendation-System 🎬
+# Hybrid-Movie-Recommendation-System 
 
 A sophisticated hybrid movie recommendation system that intelligently combines content-based filtering and collaborative filtering techniques. Built with Python, Scikit-learn, and powered by a Flask REST API, this project offers personalized movie suggestions to users.
 
 [![GitHub Stars](https://img.shields.io/github/stars/Deadeepya574/Hybrid-Movie-Recommendation-System?style=social)](https://github.com/Deadeepya574/Hybrid-Movie-Recommendation-System)
 [![GitHub Forks](https://img.shields.io/github/forks/Deadeepya574/Hybrid-Movie-Recommendation-System?style=social)](https://github.com/Deadeepya574/Hybrid-Movie-Recommendation-System)
 
----
-
-## Table of Contents 📝
+## Table of Contents 
 
 * [About the Project](#about-the-project)
-* [Features](#features) ✨
-* [Tech Stack](#tech-stack) 🛠️
-* [Installation](#installation) 🚀
-* [Usage](#usage) ▶️
-* [How to Use](#how-to-use) 💡
-* [Project Structure](#project-structure) 📁
-* [API Reference](#api-reference) 🌐
-* [Contributing](#contributing) 🤝
-* [License](#license) 📄
-* [Important Links](#important-links) 🔗
-* [Footer](#footer) 👣
+* [Features](#features) 
+* [Tech Stack](#tech-stack) 
+* [Installation](#installation) 
+* [Usage](#usage) 
+* [How to Use](#how-to-use) 
+* [Project Structure](#project-structure) 
+* [API Reference](#api-reference)  
+* [Important Links](#important-links)   
 
----
-
-## About the Project ℹ️
+## About the Project 
 
 This project aims to provide highly relevant movie recommendations by leveraging two powerful approaches:
 
@@ -33,11 +26,9 @@ This project aims to provide highly relevant movie recommendations by leveraging
 
 The system integrates these methods into a hybrid model to offer a more robust and accurate recommendation experience. A Flask backend serves these recommendations via a RESTful API, and a simple HTML/CSS/JavaScript frontend provides an interactive user interface.
 
-The project utilizes the MovieLens dataset (`ml-latest-small`) for its movie and rating information.
+The project utilizes the MovieLens dataset (`ml-latest-small`) for its movie and rating information. 
 
----
-
-## Features ✨
+## Features 
 
 *   **Hybrid Recommendation Engine**: Combines content-based and collaborative filtering for enhanced accuracy.
 *   **Content-Based Filtering**: Utilizes TF-IDF vectorization and cosine similarity on movie features (title, genres).
@@ -46,11 +37,9 @@ The project utilizes the MovieLens dataset (`ml-latest-small`) for its movie and
 *   **Movie Search Functionality**: Allows users to search for movies to get recommendations.
 *   **Interactive Frontend**: A simple web interface for searching movies and receiving recommendations.
 *   **Data Preprocessing**: Includes scripts for cleaning and preparing the MovieLens dataset.
-*   **Model Evaluation**: Implements scripts to evaluate recommendation model performance (RMSE, MAE, Precision, Recall).
+*   **Model Evaluation**: Implements scripts to evaluate recommendation model performance (RMSE, MAE, Precision, Recall). 
 
----
-
-## Tech Stack 🛠️
+## Tech Stack 
 
 *   **Language**: Python
 *   **Frameworks**: Flask (for the API), Express (used in analysis, but not prominent in code), TypeScript (used in analysis, but not prominent in code)
@@ -58,11 +47,9 @@ The project utilizes the MovieLens dataset (`ml-latest-small`) for its movie and
     *   Scikit-learn (for TF-IDF, cosine similarity, model evaluation)
     *   Pandas (for data manipulation)
     *   NumPy (for numerical operations)
-*   **Frontend**: HTML, CSS, JavaScript
+*   **Frontend**: HTML, CSS, JavaScript 
 
----
-
-## Installation 🚀
+## Installation 
 
 This project is straightforward to set up. Ensure you have Python installed.
 
@@ -85,11 +72,9 @@ This project is straightforward to set up. Ensure you have Python installed.
     ```bash
     python data_preprocessing_ml.py
     ```
-    This script will generate `data/processed_movies.csv` and `data/processed_ratings.csv`.
+    This script will generate `data/processed_movies.csv` and `data/processed_ratings.csv`. 
 
----
-
-## Usage ▶️
+## Usage 
 
 This project serves as a recommendation engine that can be accessed via its Flask API and a simple frontend.
 
@@ -105,9 +90,7 @@ This project serves as a recommendation engine that can be accessed via its Flas
     *   **Get Recommendations**: After selecting a movie, enter a `User ID` (e.g., `1`) and click `Recommend Movies`.
     *   The system will display a list of recommended movies based on the hybrid model.
 
----
-
-## How to Use 💡
+## How to Use 
 
 This recommendation system can be integrated into various applications:
 
@@ -121,11 +104,9 @@ This recommendation system can be integrated into various applications:
 2.  The system retrieves similar movies based on content (e.g., other sci-fi thrillers).
 3.  The system identifies users who liked "Inception" and have similar viewing habits.
 4.  It then recommends movies liked by those similar users but not yet seen by the current user.
-5.  Both content and collaborative scores are combined to provide a final hybrid score, ranking the recommendations.
+5.  Both content and collaborative scores are combined to provide a final hybrid score, ranking the recommendations. 
 
----
-
-## Project Structure 📁
+## Project Structure 
 
 ```
 Hybrid-Movie-Recommendation-System/
@@ -152,9 +133,7 @@ Hybrid-Movie-Recommendation-System/
 └── README.md              # Project README file
 ```
 
----
-
-## API Reference 🌐
+## API Reference 
 
 The Flask application exposes the following API endpoints:
 
@@ -182,47 +161,10 @@ The Flask application exposes the following API endpoints:
     *   **Returns**: A JSON object containing the status, input movie, user ID, and an array of `recommendations`. Each recommendation includes `movieId`, `title`, `genres`, `content_score`, `collaborative_score`, and `hybrid_score`.
     *   Example: `/recommend?movie=Toy%20Story%20(1995)&user_id=1&top_n=5`
 
----
-
-## Contributing 🤝
-
-Contributions are welcome! Please feel free to:
-
-1.  Fork the repository.
-2.  Create a new branch (`git checkout -b feature/your-feature`).
-3.  Make your changes.
-4.  Commit your changes (`git commit -m 'Add some feature'`).
-5.  Push to the branch (`git push origin feature/your-feature`).
-6.  Open a Pull Request.
-
-Please ensure your code adheres to the project's style and includes appropriate tests if applicable.
-
----
-
-## License 📄
-
-This project is not explicitly licensed. Please refer to the [MovieLens dataset usage license](data/README.txt) for information regarding the data used.
-
----
-
 ## Important Links 🔗
 
 *   **Project Repository**: [https://github.com/Deadeepya574/Hybrid-Movie-Recommendation-System](https://github.com/Deadeepya574/Hybrid-Movie-Recommendation-System)
 *   **MovieLens Dataset**: [http://grouplens.org/datasets/movielens/](http://grouplens.org/datasets/movielens/)
-
----
-
-## Footer 👣
-
-© 2023 Deadeepya574
-
-This project is a demonstration of hybrid recommendation system techniques.
-
-*   [Fork this repository](https://github.com/Deadeepya574/Hybrid-Movie-Recommendation-System/fork)
-*   [Star this repository](https://github.com/Deadeepya574/Hybrid-Movie-Recommendation-System/stargazers)
-*   [Report an issue](https://github.com/Deadeepya574/Hybrid-Movie-Recommendation-System/issues)
-
-Feel free to reach out for any queries or collaborations!
 
 
 ---
