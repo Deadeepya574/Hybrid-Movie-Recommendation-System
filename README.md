@@ -27,7 +27,7 @@ The project utilizes the MovieLens dataset (`ml-latest-small`) for its movie and
 
 ---
 
-## Tech Stack 🛠️
+## Tech Stack 
 
 *   **Language**: Python
 *   **Frameworks**: Streamlit (for frontend)
@@ -41,7 +41,7 @@ The project utilizes the MovieLens dataset (`ml-latest-small`) for its movie and
 
 ---
 
-## Installation 🚀
+## Installation 
 
 This project is straightforward to set up. Ensure you have Python installed.
 
@@ -130,7 +130,7 @@ Hybrid-Movie-Recommendation-System/
 
 ---
 
-## Important Links 🔗
+## Important Links 
 
 *   **Project Repository**: [https://github.com/Deadeepya574/Hybrid-Movie-Recommendation-System](https://github.com/Deadeepya574/Hybrid-Movie-Recommendation-System)
 *   **MovieLens Dataset**: [http://grouplens.org/datasets/movielens/](http://grouplens.org/datasets/movielens/)
