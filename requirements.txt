@@ -1,9 +1,6 @@
-Flask
-flask-cors
+
+streamlit
 pandas
 numpy
 scikit-learn
-scipy
-matplotlib
-seaborn
-gunicorn
+requests
