@@ -38,11 +38,18 @@ content_similarity = cosine_similarity(
     tfidf_matrix
 )
 
+ 
+movies["title_normalized"] = (
+    movies["title"]
+    .str.replace(r"\s*\(\d{4}\)$", "", regex=True)
+    .str.strip()
+    .str.casefold()
+)
+
 movie_indices = pd.Series(
     movies.index,
-    index=movies["title"]
+    index=movies["title_normalized"]
 ).drop_duplicates()
-
 
 # =====================================
 # 3. COLLABORATIVE MODEL
@@ -69,15 +76,27 @@ user_similarity_df = pd.DataFrame(
 # 4. HYBRID RECOMMENDATION
 # =====================================
 
+ 
+
 def hybrid_recommend(movie_title, user_id, top_n=10, alpha=0.5):
 
-    if movie_title not in movie_indices:
-        return "Movie not found!"
+    # Normalize input: "Avatar" and "Avatar (2009)"
+    normalized_title = (
+        pd.Series([str(movie_title)])
+        .str.replace(r"\s*\(\d{4}\)$", "", regex=True)
+        .str.strip()
+        .str.casefold()
+        .iloc[0]
+    )
+ 
+    if normalized_title not in movie_indices.index:
+        return "Movie not found! Please check the movie title."
+
+    movie_idx = movie_indices[normalized_title]
 
     if user_id not in user_movie_matrix.index:
         return "User not found!"
-
-    movie_idx = movie_indices[movie_title]
+ 
 
     # Content similarity scores
     content_scores = content_similarity[movie_idx]
@@ -157,12 +176,12 @@ def hybrid_recommend(movie_title, user_id, top_n=10, alpha=0.5):
 # 5. TEST
 # =====================================
 
-result = hybrid_recommend(
-    movie_title="Toy Story (1995)",
-    user_id=1,
-    top_n=10
-)
+if __name__ == "__main__":
+    result = hybrid_recommend(
+        movie_title="Toy Story (1995)",
+        user_id=1,
+        top_n=10
+    )
 
-print("\n========== HYBRID RECOMMENDATIONS ==========")
-
-print(result)
+    print("\n========== HYBRID RECOMMENDATIONS ==========")
+    print(result)
