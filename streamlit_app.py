@@ -13,13 +13,7 @@ st.set_page_config(
     layout="wide"
 )
 
-TMDB_API_KEY = os.getenv("TMDB_API_KEY", "")
-
-if not TMDB_API_KEY:
-    try:
-        TMDB_API_KEY = st.secrets["TMDB_API_KEY"]
-    except Exception:
-        TMDB_API_KEY = ""
+TMDB_API_KEY="6c441138aea6fce6808058e44978b18f"
         
 # -------------------- STYLING --------------------
 st.markdown("""
@@ -182,7 +176,8 @@ with st.container(border=True):
     with col2:
         top_n = st.select_slider(
             "Movies to recommend",
-            options=[5, 8, 10, 12, 15, 20],
+            options=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+             11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
             value=8
         )
 
