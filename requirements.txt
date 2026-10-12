@@ -1,5 +1,9 @@
-Flask 
+Flask
+flask-cors
 pandas
 numpy
 scikit-learn
-Python
+scipy
+matplotlib
+seaborn
+gunicorn
