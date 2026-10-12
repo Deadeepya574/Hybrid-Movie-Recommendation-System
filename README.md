@@ -118,7 +118,6 @@ Hybrid-Movie-Recommendation-System/
 │   ├── processed_ratings.csv
 │   ├── README.txt
 │   └── tags.csv
-├── app.py                 # Main Flask application (not directly used by Streamlit)
 ├── collaborative_filtering.py # Standalone collaborative filtering logic
 ├── content_based.py       # Standalone content-based filtering logic
 ├── data_collection_ml.py  # Script for initial data exploration
