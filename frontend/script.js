@@ -1,4 +1,4 @@
-const API_URL = "";
+const API_URL = "https://hybrid-movie-recommendation-system-bptg.onrender.com";
 
 let selectedMovie = null;
 
