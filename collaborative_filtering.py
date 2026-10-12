@@ -60,22 +60,20 @@ def recommend_movies(user_id, top_n=10):
 
     if user_id not in user_movie_matrix.index:
         return "User not found!"
-
-    # Similar users
+ 
     similar_users = user_similarity_df[user_id].sort_values(
         ascending=False
     )
 
-    # Exclude the same user
+    
     similar_users = similar_users.drop(user_id)
 
-    # Select top 10 similar users
+   
     similar_users = similar_users.head(10)
 
-    # Movies already watched
+     
     watched_movies = user_movie_matrix.loc[user_id].dropna().index
-
-    # Candidate movies
+ 
     candidate_movies = user_movie_matrix.columns.difference(
         watched_movies
     )
@@ -116,7 +114,7 @@ def recommend_movies(user_id, top_n=10):
         columns=["movieId", "predicted_rating"]
     )
 
-    # Add movie titles
+    
     movies = pd.read_csv("data/processed_movies.csv")
 
     result = result.merge(
@@ -132,6 +130,6 @@ def recommend_movies(user_id, top_n=10):
 # 6. TEST
 # =====================================
 
-print("\n========== RECOMMENDATIONS ==========")
+print("\nRECOMMENDATIONS  ")
 
 print(recommend_movies(user_id=1, top_n=10))
