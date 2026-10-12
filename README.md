@@ -135,6 +135,6 @@ Hybrid-Movie-Recommendation-System/
 
 *   **Project Repository**: [https://github.com/Deadeepya574/Hybrid-Movie-Recommendation-System](https://github.com/Deadeepya574/Hybrid-Movie-Recommendation-System)
 *   **MovieLens Dataset**: [http://grouplens.org/datasets/movielens/](http://grouplens.org/datasets/movielens/)
-*   **Project Link**: [Hybrid Movie Recomendation System]()
+*   **Project Link**: [Hybrid Movie Recomendation System](https://hybrid-movie-recommendation-system-q4h2vunpygesd3ed2hfgbs.streamlit.app)
 ---
  
