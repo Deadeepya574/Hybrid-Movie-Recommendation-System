@@ -99,7 +99,7 @@ def recommend_movies(movie_title, top_n=10):
 # 7. TEST
 # =====================================
 
-print("\n========== RECOMMENDATIONS ==========")
+print("\n  RECOMMENDATIONS ")
 
 result = recommend_movies("Toy Story (1995)", 10)
 
